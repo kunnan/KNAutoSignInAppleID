@@ -1,0 +1,30 @@
+
+
+
+function knsetupdeploy(){
+# com.libing.mplinl
+
+	cd `dirname $0` 
+	make clean
+	rm -rf ./packages
+	make package install
+	
+}
+
+
+
+
+
+
+
+echo "" > ~/.ssh/known_hosts
+
+# 此包代码，已经集成到本tweak
+# iPhone:~ root# dpkg -l |grep launchappandautounlock 
+# ii  com.yourcompany.launchappandautounlock         0.0.1-1+debug    iphoneos-arm An awesome MobileSubstrate tweak!
+# ssh usb2222 dpkg -r com.yourcompany.launchappandautounlock
+
+ 
+    knsetupdeploy
+
+exit 0
